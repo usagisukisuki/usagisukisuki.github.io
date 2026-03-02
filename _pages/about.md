@@ -11,7 +11,7 @@ This is the front page of a website that is powered by the [Academic Pages templ
 
  You can fork [this template](https://github.com/academicpages/academicpages.github.io) right now, modify the configuration and Markdown files, add your own PDFs and other content, and have your own site for free, with no ads!
 
-## Research
+# My Research
 {% include research-grid.html %}
 
 A data-driven personal website
