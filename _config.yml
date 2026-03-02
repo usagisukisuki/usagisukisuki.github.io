@@ -11,7 +11,7 @@ locale                   : "en-US"
 site_theme               : "default" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
 title                    : "Sota Kato"
 minimal_mistakes_skin: default
-extra_css:
+head_scripts:
   - /assets/css/custom.css
 title_separator          : "-"
 name                     : &name "Sota Kato"
