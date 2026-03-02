@@ -26,10 +26,9 @@ author:
   avatar           : "profile.jpg"
   name             : "Sota Kato, Ph.D"
   pronouns         : # example: "she/her"  
-  bio              : "Computer Vision and Pattern Recognition. 
-  Interested in geometric consistency and real-world perception systems."
-  location         : "Earth"
-  employer         : "Red Brick University"
+  bio              : "Computer vision  Pattern recognition  Edge and Mobile model"
+  location         : "Japan"
+  employer         : #"Red Brick University"
   uri              : # URL
   email            : "kato@k2i-jp.com" 
 
@@ -52,22 +51,22 @@ author:
   bitbucket        : # Username - Update with your username on the site
   codepen          : # Username
   dribbble         : # Username
-  github           : "academicpages"
+  github           : "usagisukisuki"
   kaggle           : # Username  
   stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
 
   # Social media
   #artstation       : # Username
-  #bluesky          : "bsky.app" # Replace this with you Bluesky username
+  #bluesky          : #"bsky.app" # Replace this with you Bluesky username
   #facebook         : # Username
   #flickr           : # Username
   #foursquare       : # Username
-  goodreads        : "https://scholar.google.co.jp/citations?user=PTl21uUAAAAJ&hl=ja"# Username
+  #goodreads        : "https://scholar.google.co.jp/citations?user=PTl21uUAAAAJ&hl=ja"# Username
   #google_plus      : # Username
   #keybase          : # Username
   #instagram        : # Username
   #lastfm           : # Username
-  linkedin         : # Username
+  #linkedin         : # Username
   #mastodon         : # URL
   #medium           : # URL
   #pinterest        : # Username
@@ -75,7 +74,7 @@ author:
   #steam            : # Username
   #telegram         : # URL
   #tumblr           : # Username
-  twitter          : "https://twitter.com/usagisukisuki_"# Username for X / Twitter
+  twitter          : "https://twitter.com/usagisukisuki_" # Username for X / Twitter
   #vine             : # Username
   #weibo            : # Username
   #wikipedia        : # Username
