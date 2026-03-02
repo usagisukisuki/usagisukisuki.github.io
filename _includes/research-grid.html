@@ -1,82 +1,85 @@
-<div class="research-topics" style="margin: 0.5rem 0 1rem 0; display:flex; gap:.5rem; flex-wrap:wrap;">
-  {% assign tps = site.data.research.topics %}
-  {% for t in tps %}
-    <button class="topic-btn"
-            data-topic="{{ t }}"
-            style="border:1px solid #bbb; background:#fff; border-radius:999px; padding:.35rem .75rem; cursor:pointer;">
-      {{ t }}
-    </button>
+{% assign topics = site.data.research.topics %}
+{% assign items = site.data.research.items %}
+
+<div class="research-by-topic">
+  {% for topic in topics %}
+    {% if topic != "all" %}
+      <section class="rt-section">
+        <h3 class="rt-title">{{ topic }}</h3>
+
+        <div class="rt-row">
+          {% for it in items %}
+            {% if it.tags contains topic %}
+              <article class="rt-card">
+                {% if it.image %}
+                  <div class="rt-img">
+                    <img src="{{ it.image }}" alt="">
+                  </div>
+                {% endif %}
+
+                <div class="rt-body">
+                  <div class="rt-card-title">{{ it.title }}</div>
+                  <div class="rt-meta">
+                    <span class="rt-venue">{{ it.venue }}</span>{% if it.year %}, <span class="rt-year">{{ it.year }}</span>{% endif %}
+                  </div>
+                  <div class="rt-authors">{{ it.authors }}</div>
+
+                  {% if it.links and it.links.size > 0 %}
+                    <div class="rt-links">
+                      {% for l in it.links %}
+                        <a href="{{ l.url }}">[{{ l.text }}]</a>
+                      {% endfor %}
+                    </div>
+                  {% endif %}
+                </div>
+              </article>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </section>
+    {% endif %}
   {% endfor %}
 </div>
 
-<div id="research-grid" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap:1rem;">
-  {% for it in site.data.research.items %}
-    <div class="research-card"
-         data-tags="{{ it.tags | join: ' ' }}"
-         style="border:1px solid #e5e5e5; border-radius:12px; overflow:hidden; background:#fff;">
-      {% if it.image %}
-      <div style="aspect-ratio: 16/9; overflow:hidden; background:#f6f6f6;">
-        <img src="{{ it.image }}" alt="" style="width:100%; height:100%; object-fit:cover;">
-      </div>
-      {% endif %}
+<style>
+  .rt-section { margin: 1.25rem 0 1.75rem 0; }
+  .rt-title { margin: 0 0 .75rem 0; font-size: 1.15rem; }
 
-      <div style="padding: .9rem 1rem;">
-        <div style="font-size:1.05rem; font-weight:700; line-height:1.3;">
-          {{ it.title }}
-        </div>
-
-        <div style="margin-top:.35rem; font-style:italic; opacity:.85;">
-          {{ it.venue }}{% if it.year %}, {{ it.year }}{% endif %}
-        </div>
-
-        <div style="margin-top:.25rem; opacity:.9;">
-          {{ it.authors }}
-        </div>
-
-        {% if it.links and it.links.size > 0 %}
-        <div style="margin-top:.5rem; display:flex; gap:.75rem; flex-wrap:wrap;">
-          {% for l in it.links %}
-            <a href="{{ l.url }}" style="text-decoration:none;">[{{ l.text }}]</a>
-          {% endfor %}
-        </div>
-        {% endif %}
-
-        <div style="margin-top:.6rem; display:flex; gap:.35rem; flex-wrap:wrap;">
-          {% for tg in it.tags %}
-            <span style="font-size:.8rem; border:1px solid #ddd; border-radius:999px; padding:.15rem .5rem; opacity:.85;">
-              {{ tg }}
-            </span>
-          {% endfor %}
-        </div>
-      </div>
-    </div>
-  {% endfor %}
-</div>
-
-<script>
-(function(){
-  const buttons = document.querySelectorAll(".topic-btn");
-  const cards = document.querySelectorAll(".research-card");
-
-  function setActive(topic){
-    buttons.forEach(b=>{
-      const on = b.dataset.topic === topic;
-      b.style.background = on ? "#f0f0f0" : "#fff";
-    });
-
-    cards.forEach(c=>{
-      const tags = (c.dataset.tags || "").split(/\s+/);
-      const show = (topic === "all") || tags.includes(topic);
-      c.style.display = show ? "block" : "none";
-    });
+  /* 1トピック = 横スクロール1段 */
+  .rt-row{
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    padding-bottom: .25rem;
+    scroll-snap-type: x mandatory;
   }
 
-  buttons.forEach(b=>{
-    b.addEventListener("click", ()=> setActive(b.dataset.topic));
-  });
+  /* 横長カード */
+  .rt-card{
+    flex: 0 0 560px;               /* カード幅（好みで 480-640 くらい） */
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    border: 1px solid #e6e6e6;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+    scroll-snap-align: start;
+  }
 
-  // 初期表示（selected があれば selected、なければ all）
-  const initial = Array.from(buttons).some(b=>b.dataset.topic==="selected") ? "selected" : "all";
-  setActive(initial);
-})();
-</script>
+  .rt-img{
+    background: #f5f5f5;
+    height: 160px;
+  }
+  .rt-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .rt-body{ padding: .85rem 1rem; }
+  .rt-card-title{ font-weight: 700; line-height: 1.25; }
+  .rt-meta{ margin-top: .35rem; font-style: italic; opacity: .85; }
+  .rt-authors{ margin-top: .25rem; opacity: .9; }
+  .rt-links{ margin-top: .5rem; display: flex; gap: .75rem; flex-wrap: wrap; }
+</style>
