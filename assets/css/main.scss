@@ -7,6 +7,11 @@
  * Note that the files are processed in the order they are imported, so they are partly
    sorted by the dependencies. Also, the first two lines of the file are required by Jekyll.
  */
+@import "minimal-mistakes";
+
+.author__avatar img {
+  border-radius: 0 !important;
+}
 
 @import
     "vendor/breakpoint/breakpoint",
@@ -42,8 +47,3 @@
     "vendor/font-awesome/brands"
 ;
 
-@import "minimal-mistakes";
-
-.author__avatar img {
-  border-radius: 0 !important;
-}
