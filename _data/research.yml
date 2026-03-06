@@ -9,9 +9,9 @@ topics:
 
 items:
   - title: "REMODE: REal-time Monocular 3D ObjectDetection on Edge Devices"
-    year: 2026
+    year: 
     authors: "Sota Kato"
-    venue: "Ongoing"
+    venue: "Coming soon"
     image: "/images/research/bev.png"
     links:
       - text: "PDF"
@@ -20,79 +20,87 @@ items:
 
 
   - title: "Generalized SAM: Efficient Fine-Tuning of SAM for Variable Input Image Sizes"
-    year: 2026
-    authors: "Sota Kato"
-    venue: "Ongoing"
+    year: 2024
+    authors: "Sota Kato, Hinako Mitsuoka, Kazuhiro Hotta"
+    venue: "Computational Aspects of Deep Learning (ECCV Workshop)"
     image: "/images/research/bev.png"
     links:
       - text: "PDF"
-        url: "https://example.com/paper.pdf"
+        url: "https://arxiv.org/pdf/2408.12406"
     tags: ["Foundation Model Adaptation"]
 
 
 
   - title: "False cross entropy loss"
     year: 2024
-    authors: "Sota Kato"
-    venue: "Workshop"
+    authors: "Sota Kato, Kazuhiro Hotta"
+    venue: "Computational Aspects of Deep Learning (ECCV Workshop)"
     image: "/images/research/ipm.png"
     links:
-      - text: "Project"
-        url: "https://example.com/project"
+      - text: "PDF"
+        url: "https://arxiv.org/pdf/2408.12406"
     tags: ["Imbalanced Learning"]
     
   - title: "Enlarged large margin loss"
-    year: 2024
-    authors: "Sota Kato"
-    venue: "Workshop"
+    year: 2023
+    authors: "Sota Kato, Kazuhiro Hotta"
+    venue: "IEEE International Conference on Systems, Man, and Cybernetics (SMC)"
     image: "/images/research/ipm.png"
     links:
-      - text: "Project"
-        url: "https://example.com/project"
+      - text: "PDF"
+        url: "https://arxiv.org/pdf/2306.09132"
     tags: ["Imbalanced Learning"]
 
   - title: "MSE loss with outlying label"
     year: 2024
-    authors: "Sota Kato"
+    authors: "Sota Kato, Kazuhiro Hotta"
     venue: "Workshop"
     image: "/images/research/ipm.png"
     links:
-      - text: "Project"
-        url: "https://example.com/project"
+      - text: "PDF"
+        url: "https://arxiv.org/pdf/2107.02393.pdf"
     tags: ["Imbalanced Learning"]
 
 
 
   - title: "Adaptive t-vMF dice loss for medical image segmentation"
-    year: 2024
-    authors: "Sota Kato"
-    venue: "In progress"
+    year: 2023
+    authors: "Sota Kato, Kazuhiro Hotta"
+    venue: "Computers in Biology and Medicine"
     image: "/images/research/plan.png"
-    links: []
+    links:
+      - text: "PDF"
+        url: "https://arxiv.org/pdf/2107.02393.pdf"
     tags: ["Medical Imaging"]
 
   - title: "Expanded tube attention for tubular structure segmentation"
-    year: 2024
-    authors: "Sota Kato"
-    venue: "In progress"
+    year: 2023
+    authors: "Sota Kato, Kazuhiro Hotta"
+    venue: "International Journal of Computer Assisted Radiology and Surgery"
     image: "/images/research/plan.png"
-    links: []
+    links:
+      - text: "PDF"
+        url: "https://link.springer.com/article/10.1007/s11548-023-03038-2"
     tags: ["Medical Imaging"]
 
   - title: "Classification and visual explanation for COVID-19 pneumonia"
-    year: 2024
+    year: 2022
     authors: "Sota Kato"
-    venue: "In progress"
+    venue: "Scientific Reports"
     image: "/images/research/plan.png"
-    links: []
+    links:
+      - text: "PDF"
+        url: "https://www.nature.com/articles/s41598-022-24936-6"
     tags: ["Medical Imaging"]
 
   - title: "Automatic classification of pancreatic cancer and analysis of video frames"
     year: 2024
-    authors: "Sota Kato"
-    venue: "In progress"
+    authors: "Sota Kato, Kazuhiro Hotta"
+    venue: "Scientific Reports"
     image: "/images/research/plan.png"
-    links: []
+    links:
+      - text: "PDF"
+        url: "https://www.nature.com/articles/s41598-024-53411-7"
     tags: ["Medical Imaging"]
 
 
