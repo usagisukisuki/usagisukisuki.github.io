@@ -1,24 +1,37 @@
 # _data/research.yml
 topics:
-  - all
-  - selected
-  - perception
-  - planning
-  - mapping
-  - others
+  - Edge AI for Autonomous Driving
+  - Foundation Model Adaptation
+  - Imbalanced Learning
+  - Medical Imaging
+  - Biolodical Imaging
+  - Action Recognision and Visualization
 
 items:
-  - title: "Monocular Depth + BEV Consistency"
-    year: 2025
+  - title: "REMODE: REal-time Monocular 3D ObjectDetection on Edge Devices"
+    year: 2026
     authors: "Sota Kato"
     venue: "Ongoing"
     image: "/images/research/bev.png"
     links:
       - text: "PDF"
         url: "https://example.com/paper.pdf"
-    tags: ["selected", "perception"]
+    tags: ["Edge AI for Autonomous Driving"]
 
-  - title: "IPM with Segmentation Priors"
+
+  - title: "Generalized SAM: Efficient Fine-Tuning of SAM for Variable Input Image Sizes"
+    year: 2026
+    authors: "Sota Kato"
+    venue: "Ongoing"
+    image: "/images/research/bev.png"
+    links:
+      - text: "PDF"
+        url: "https://example.com/paper.pdf"
+    tags: ["Foundation Model Adaptation"]
+
+
+
+  - title: "False cross entropy loss"
     year: 2024
     authors: "Sota Kato"
     venue: "Workshop"
@@ -26,12 +39,102 @@ items:
     links:
       - text: "Project"
         url: "https://example.com/project"
-    tags: ["perception", "mapping"]
+    tags: ["Imbalanced Learning"]
+    
+  - title: "Enlarged large margin loss"
+    year: 2024
+    authors: "Sota Kato"
+    venue: "Workshop"
+    image: "/images/research/ipm.png"
+    links:
+      - text: "Project"
+        url: "https://example.com/project"
+    tags: ["Imbalanced Learning"]
 
-  - title: "Planning-aware Perception"
+  - title: "MSE loss with outlying label"
+    year: 2024
+    authors: "Sota Kato"
+    venue: "Workshop"
+    image: "/images/research/ipm.png"
+    links:
+      - text: "Project"
+        url: "https://example.com/project"
+    tags: ["Imbalanced Learning"]
+
+
+
+  - title: "Adaptive t-vMF dice loss for medical image segmentation"
     year: 2024
     authors: "Sota Kato"
     venue: "In progress"
     image: "/images/research/plan.png"
     links: []
-    tags: ["planning", "others"]
+    tags: ["Medical Imaging"]
+
+  - title: "Expanded tube attention for tubular structure segmentation"
+    year: 2024
+    authors: "Sota Kato"
+    venue: "In progress"
+    image: "/images/research/plan.png"
+    links: []
+    tags: ["Medical Imaging"]
+
+  - title: "Classification and visual explanation for COVID-19 pneumonia"
+    year: 2024
+    authors: "Sota Kato"
+    venue: "In progress"
+    image: "/images/research/plan.png"
+    links: []
+    tags: ["Medical Imaging"]
+
+  - title: "Automatic classification of pancreatic cancer and analysis of video frames"
+    year: 2024
+    authors: "Sota Kato"
+    venue: "In progress"
+    image: "/images/research/plan.png"
+    links: []
+    tags: ["Medical Imaging"]
+
+
+
+  - title: "One-shot and partially-supervised cell image segmentation"
+    year: 2024
+    authors: "Sota Kato"
+    venue: "In progress"
+    image: "/images/research/plan.png"
+    links: []
+    tags: ["Biolodical Imaging"]
+    
+  - title: "Automatic preprocessing for segmentation"
+    year: 2024
+    authors: "Sota Kato"
+    venue: "In progress"
+    image: "/images/research/plan.png"
+    links: []
+    tags: ["Biolodical Imaging"]
+
+  - title: "Cell image segmentation using image translation"
+    year: 2024
+    authors: "Sota Kato"
+    venue: "In progress"
+    image: "/images/research/plan.png"
+    links: []
+    tags: ["Biolodical Imaging"]
+
+
+  - title: "Pitching classification and habit detection"
+    year: 2024
+    authors: "Sota Kato"
+    venue: "In progress"
+    image: "/images/research/plan.png"
+    links: []
+    tags: ["Action Recognision and Visualization"]
+
+  - title: "Classifying physical activity in free-living preschool children"
+    year: 2024
+    authors: "Sota Kato"
+    venue: "In progress"
+    image: "/images/research/plan.png"
+    links: []
+    tags: ["Action Recognision and Visualization"]
+
