@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-I am a researcher in computer vision and machine learning. I am interested in challenges and applications of real-world data in deep learning across diverse domains. My past research includes image recognition in cell biology and medical imaging, as well as learning under class imbalance. Recently, I have been exploring real-time models for low-TOPS hardware and methods to leverage knowledge from foundation and large-scale models.
+I am a researcher in computer vision and machine learning. I received my Ph.D. in Engineering from Meijo University. I am interested in challenges and applications of real-world data in deep learning across diverse domains. My past research includes image recognition in cell biology and medical imaging, as well as learning under class imbalance. Recently, I have been exploring real-time models for low-TOPS hardware and methods to leverage knowledge from foundation and large-scale models.
 
 # Research
 {% include research-grid.html %}
