@@ -27,7 +27,7 @@
                   {% if it.links and it.links.size > 0 %}
                     <div class="rt-links">
                       {% for l in it.links %}
-                        <a href="{{ l.url }}">[{{ l.text }}]</a>
+                        <a href="{{ l.url }}" class="rt-link">{{ l.text }}</a>
                       {% endfor %}
                     </div>
                   {% endif %}
