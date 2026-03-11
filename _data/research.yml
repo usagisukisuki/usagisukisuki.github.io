@@ -27,8 +27,11 @@ items:
     links:
       - text: "PDF"
         url: "https://arxiv.org/pdf/2408.12406"
+      - text: "Code"
+        url: "https://github.com/username/project"
+      - text: "Project"
+        url: "https://project-page.com"
     tags: ["Foundation Model Adaptation"]
-
 
     
   - title: "Enlarged large margin loss"
