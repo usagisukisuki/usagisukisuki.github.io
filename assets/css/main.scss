@@ -47,3 +47,30 @@
     "vendor/font-awesome/brands"
 ;
 
+@media (min-width: 1024px) {
+  .masthead__inner-wrap {
+    max-width: 1400px;
+  }
+
+  .greedy-nav {
+    display: flex;
+    align-items: center;
+  }
+
+  .greedy-nav .visible-links {
+    display: flex !important;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .greedy-nav__toggle,
+  .greedy-nav .hidden-links {
+    display: none !important;
+  }
+
+  .greedy-nav a {
+    font-size: 0.95rem;
+    padding: 0.5rem 0.8rem;
+  }
+}
+
