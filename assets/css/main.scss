@@ -7,74 +7,143 @@
  * Note that the files are processed in the order they are imported, so they are partly
    sorted by the dependencies. Also, the first two lines of the file are required by Jekyll.
  */
+
 @import "minimal-mistakes";
 
+/* avatar square */
 .author__avatar img {
   border-radius: 0 !important;
 }
 
 @import
-    "vendor/breakpoint/breakpoint",
+  "vendor/breakpoint/breakpoint",
 
-    "themes",
-    "theme/{{ site.site_theme | default: 'default' | append: '_light' }}",
-    "theme/{{ site.site_theme | default: 'default' | append: '_dark' }}",
+  "themes",
+  "theme/{{ site.site_theme | default: 'default' | append: '_light' }}",
+  "theme/{{ site.site_theme | default: 'default' | append: '_dark' }}",
 
-    "include/mixins",
-    "vendor/susy/susy",
+  "include/mixins",
+  "vendor/susy/susy",
 
-    "layout/reset",
-    "layout/base",
+  "layout/reset",
+  "layout/base",
 
-    "include/utilities",
-    "layout/tables",
-    "layout/buttons",
-    "layout/notices",
-    "layout/masthead",
-    "layout/navigation",
-    "layout/footer",
-    "syntax",
+  "include/utilities",
+  "layout/tables",
+  "layout/buttons",
+  "layout/notices",
+  "layout/masthead",
+  "layout/navigation",
+  "layout/footer",
+  "syntax",
 
-    "layout/forms",
+  "layout/forms",
 
-    "layout/page",
-    "layout/archive",
-    "layout/sidebar",
-    "layout/json_cv",
+  "layout/page",
+  "layout/archive",
+  "layout/sidebar",
+  "layout/json_cv",
 
-    "vendor/font-awesome/fontawesome",
-    "vendor/font-awesome/solid",
-    "vendor/font-awesome/brands"
+  "vendor/font-awesome/fontawesome",
+  "vendor/font-awesome/solid",
+  "vendor/font-awesome/brands"
 ;
 
-/* ===== desktop nav override ===== */
-@media (min-width: 1024px) {
-  .masthead__inner-wrap {
-    max-width: 1400px !important;
-  }
+/* =========================================================
+   Custom Header Layout
+   ========================================================= */
 
-  .greedy-nav {
-    display: flex !important;
-    align-items: center !important;
-  }
-
-  .greedy-nav .visible-links {
-    display: flex !important;
-    flex-wrap: wrap !important;
-    align-items: center !important;
-  }
-
-  .greedy-nav .visible-links li {
-    display: inline-block !important;
-  }
-
-  .greedy-nav .visible-links a {
-    white-space: nowrap !important;
-  }
-
-  .greedy-nav__toggle,
-  .greedy-nav .hidden-links {
-    display: none !important;
-  }
+/* header container */
+.masthead {
+  border-bottom: 1px solid #eee;
 }
 
+.masthead__inner-wrap {
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  padding: 0.6rem 1.25rem !important;
+}
+
+/* navigation layout */
+.greedy-nav {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  background: transparent !important;
+  min-height: 56px;
+}
+
+/* site title left */
+.site-title {
+  flex: 0 0 auto !important;
+  margin-right: auto !important;
+  white-space: nowrap !important;
+  font-weight: 700;
+  font-size: 1.05rem !important;
+  letter-spacing: 0.01em;
+}
+
+/* hide normal tabs */
+.greedy-nav .visible-links {
+  display: none !important;
+}
+
+/* hamburger button */
+.greedy-nav__toggle {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  margin-left: 1rem !important;
+  margin-right: 0.25rem !important;
+  padding: 0.45rem 0.65rem !important;
+  border: 1px solid #e6e6e6 !important;
+  border-radius: 10px !important;
+  background: #ffffff !important;
+  line-height: 1;
+}
+
+.greedy-nav__toggle:hover {
+  background: #f7f7f7 !important;
+}
+
+.greedy-nav__toggle .navicon {
+  margin: 0 !important;
+}
+
+/* dropdown menu */
+.greedy-nav .hidden-links {
+  right: 0.75rem !important;
+  top: calc(100% + 0.35rem) !important;
+  min-width: 180px;
+  border: 1px solid #e8e8e8;
+  border-radius: 10px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+  padding: 0.4rem 0;
+}
+
+.greedy-nav .hidden-links a {
+  display: block;
+  padding: 0.55rem 0.9rem;
+  text-decoration: none;
+}
+
+.greedy-nav .hidden-links a:hover {
+  background: #f6f6f6;
+}
+
+/* mobile adjustments */
+@media (max-width: 640px) {
+
+  .masthead__inner-wrap {
+    padding: 0.55rem 0.9rem !important;
+  }
+
+  .site-title {
+    font-size: 0.95rem !important;
+  }
+
+  .greedy-nav__toggle {
+    margin-right: 0 !important;
+  }
+
+}
