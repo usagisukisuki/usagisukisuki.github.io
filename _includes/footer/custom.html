@@ -13,4 +13,36 @@
     await mermaid.run({querySelector:'code.language-mermaid'});
 </script>
 
+<!-- Force desktop navigation -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  function fixDesktopNav() {
+
+    if (window.innerWidth >= 1024) {
+
+      const nav = document.querySelector(".greedy-nav");
+      if (!nav) return;
+
+      const visible = nav.querySelector(".visible-links");
+      const hidden = nav.querySelector(".hidden-links");
+      const toggle = nav.querySelector(".greedy-nav__toggle");
+
+      if (!visible || !hidden) return;
+
+      hidden.querySelectorAll("li").forEach(function(item){
+        visible.appendChild(item);
+      });
+
+      if (toggle) toggle.style.display = "none";
+      hidden.style.display = "none";
+    }
+  }
+
+  fixDesktopNav();
+  window.addEventListener("resize", fixDesktopNav);
+
+});
+</script>
+
 <!-- end custom footer snippets -->
