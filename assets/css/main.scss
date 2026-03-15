@@ -47,30 +47,34 @@
     "vendor/font-awesome/brands"
 ;
 
+/* ===== desktop nav override ===== */
 @media (min-width: 1024px) {
   .masthead__inner-wrap {
-    max-width: 1400px;
+    max-width: 1400px !important;
   }
 
   .greedy-nav {
-    display: flex;
-    align-items: center;
+    display: flex !important;
+    align-items: center !important;
   }
 
   .greedy-nav .visible-links {
     display: flex !important;
-    flex-wrap: wrap;
-    align-items: center;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+  }
+
+  .greedy-nav .visible-links li {
+    display: inline-block !important;
+  }
+
+  .greedy-nav .visible-links a {
+    white-space: nowrap !important;
   }
 
   .greedy-nav__toggle,
   .greedy-nav .hidden-links {
     display: none !important;
-  }
-
-  .greedy-nav a {
-    font-size: 0.95rem;
-    padding: 0.5rem 0.8rem;
   }
 }
 
