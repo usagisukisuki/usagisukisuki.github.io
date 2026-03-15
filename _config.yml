@@ -11,8 +11,8 @@ locale                   : "en-US"
 site_theme               : "default" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
 title                    : "Sota Kato"
 minimal_mistakes_skin: default
-head_scripts:
-  - /assets/css/custom.css
+#head_scripts:
+#  - /assets/css/custom.css
 title_separator          : "-"
 name                     : &name "Sota Kato"
 description              : &description "K2I.Ltd."   # Update this with a general description of your site, this is the default if not overridden by a page
