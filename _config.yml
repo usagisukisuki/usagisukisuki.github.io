@@ -99,7 +99,7 @@ publication_category:
     title: 'International Conference (Full paper, Refereed)'
   short:
     title: 'International Conference (Short paper)'
-  jp:
+  domestic:
     title: 'Domestic Conference'
 
 # Site Settings
