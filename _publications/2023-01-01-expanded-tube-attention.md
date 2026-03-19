@@ -1,7 +1,7 @@
 ---
 title: "Expanded Tube Attention for Tubular Structure Segmentation"
 collection: publications
-category: journals
+category: manuscripts
 permalink: /publication/2023-expanded-tube-attention
 excerpt: 'A novel attention mechanism for tubular structure segmentation.'
 date: 2023-01-01
