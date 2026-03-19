@@ -48,13 +48,11 @@ Apr 2015 – Mar 2019
 For inquiries, collaborations, or further information, please feel free to reach out.
 
 **Email**  
-[sota.kato@email.com](mailto:sota.kato@email.com)
+[kato@k2i-jp.com](mailto:kato@k2i-jp.com)
 
-**GitHub**  
-https://github.com/usagisukisuki
+**private mail** 
+[soutakuchoco@gmail.com](mailto:soutakuchoco@gmail.com)
 
-**Google Scholar**  
-https://scholar.google.com/
+**old mail** 
+[150442030@ccalumni.meijo-u.ac.jp](mailto:150442030@ccalumni.meijo-u.ac.jp)
 
-**LinkedIn**  
-https://linkedin.com/ (which this theme was forked from) might also be helpful.
