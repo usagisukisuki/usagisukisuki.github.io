@@ -1,7 +1,7 @@
 ---
 title: "距離学習を用いたCT画像からのCOVID-19の識別"
 collection: publications
-category: journals
+category: manuscripts
 permalink: /publication/2021-covid-distance-learning
 excerpt: '距離学習を用いたCT画像によるCOVID-19識別手法.'
 date: 2021-01-01
