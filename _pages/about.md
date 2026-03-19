@@ -50,9 +50,9 @@ For inquiries, collaborations, or further information, please feel free to reach
 **Email**  
 [kato@k2i-jp.com](mailto:kato@k2i-jp.com)
 
-**private mail** 
+**Private mail**  
 [soutakuchoco@gmail.com](mailto:soutakuchoco@gmail.com)
 
-**old mail** 
+**Old mail**  
 [150442030@ccalumni.meijo-u.ac.jp](mailto:150442030@ccalumni.meijo-u.ac.jp)
 
