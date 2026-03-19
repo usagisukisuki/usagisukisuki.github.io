@@ -3,7 +3,9 @@
 
 /*
  * This file controls what is imported from /_sass
- * The first two lines are required by Jekyll.
+ *
+ * Note that the files are processed in the order they are imported, so they are partly
+ * sorted by the dependencies. Also, the first two lines of the file are required by Jekyll.
  */
 
 @import "minimal-mistakes";
@@ -11,69 +13,4 @@
 /* avatar */
 .author__avatar img {
   border-radius: 0 !important;
-}
-
-/* ===== header tweak only ===== */
-
-.masthead {
-  border-bottom: 1px solid #ececec;
-  background: #fff;
-}
-
-.masthead__inner-wrap {
-  max-width: 1180px;
-  margin: 0 auto;
-  padding: 0.7rem 1.2rem;
-}
-
-/* サイトタイトル */
-.site-title,
-.greedy-nav .site-title,
-.masthead__menu-item--lg,
-.greedy-nav .masthead__menu-item--lg {
-  white-space: nowrap;
-  font-size: 1.02rem;
-  font-weight: 650;
-  color: #222;
-  text-decoration: none;
-}
-
-/* 通常メニューは消さない */
-.greedy-nav .visible-links {
-  display: flex !important;
-  align-items: center;
-}
-
-/* hidden-links の見た目だけ調整 */
-.greedy-nav .hidden-links {
-  right: 0.2rem;
-  margin-top: 0.45rem;
-  min-width: 200px;
-  border: 1px solid #e8e8e8;
-  border-radius: 12px;
-  background: #fff;
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.10);
-}
-
-.greedy-nav .hidden-links a {
-  display: block;
-  padding: 0.62rem 0.95rem;
-  color: #222;
-  text-decoration: none;
-}
-
-.greedy-nav .hidden-links a:hover {
-  background: #f6f6f6;
-}
-
-/* モバイルでの余白だけ微調整 */
-@media (max-width: 640px) {
-  .masthead__inner-wrap {
-    padding: 0.62rem 0.9rem;
-  }
-
-  .site-title,
-  .greedy-nav .site-title {
-    font-size: 0.96rem;
-  }
 }
