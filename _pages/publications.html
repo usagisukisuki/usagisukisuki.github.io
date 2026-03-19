@@ -5,31 +5,19 @@ permalink: /publications/
 author_profile: true
 ---
 
-{% if site.author.googlescholar %}
-<p>
-  You can also find my articles on
-  <a href="{{ site.author.googlescholar }}">my Google Scholar profile</a>.
-</p>
-{% endif %}
-
 {% for category in site.publication_category %}
   {% assign posts_in_category = site.publications | where: "category", category[0] %}
+
   {% if posts_in_category.size > 0 %}
     <h2>{{ category[1].title }}</h2>
 
-    {% for post in posts_in_category reversed %}
-      <p>
-        ・
-        {% if post.paperurl %}
-          <a href="{{ post.paperurl }}">{{ post.title }}</a>
-        {% else %}
-          {{ post.title }}
-        {% endif %}
-        {% if post.venue %}, <i>{{ post.venue }}</i>{% endif %}
-        {% if post.date %}, {{ post.date | date: "%Y" }}{% endif %}
-        {% if post.citation %}<br>{{ post.citation }}{% endif %}
-      </p>
-    {% endfor %}
+    <ul class="pub-list">
+      {% for post in posts_in_category reversed %}
+        <li class="pub-item">
+          {% include archive-single-cv.html %}
+        </li>
+      {% endfor %}
+    </ul>
   {% endif %}
 {% endfor %}
 
