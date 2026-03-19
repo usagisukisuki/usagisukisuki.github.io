@@ -1,7 +1,7 @@
 ---
 title: "Adaptive t-vMF Dice Loss: An Effective Expansion of Dice Loss for Medical Image Segmentation"
 collection: publications
-category: journals
+category: manuscripts
 permalink: /publication/2023-adaptive-tvmf-dice-loss
 excerpt: 'An extended Dice loss function for improved medical image segmentation.'
 date: 2023-01-01
