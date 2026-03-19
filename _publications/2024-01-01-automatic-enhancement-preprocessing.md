@@ -1,7 +1,7 @@
 ---
 title: "Automatic enhancement preprocessing for segmentation of low quality cell images"
 collection: publications
-category: journals
+category: manuscripts
 permalink: /publication/2024-automatic-enhancement-preprocessing
 excerpt: 'Segmentation of low-quality cell images with automatic enhancement preprocessing.'
 date: 2024-01-01
