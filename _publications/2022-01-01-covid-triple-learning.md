@@ -1,7 +1,7 @@
 ---
 title: "Classification and visual explanation for COVID-19 pneumonia from CT images using triple learning"
 collection: publications
-category: journals
+category: manuscripts
 permalink: /publication/2022-covid-triple-learning
 excerpt: 'Classification and explainability of COVID-19 pneumonia using CT images and triple learning.'
 date: 2022-01-01
