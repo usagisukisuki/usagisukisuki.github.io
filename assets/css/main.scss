@@ -49,21 +49,48 @@
   "vendor/font-awesome/brands"
 ;
 
-/* ===== stable compact header ===== */
+/* ===== header ===== */
 
-.masthead {
-  border-bottom: 1px solid #ececec;
-  background: var(--global-bg-color);
+:root {
+  --nav-accent: #2f7f93;
+  --nav-accent-2: #3fa7a0;
+  --nav-accent-soft: rgba(47, 127, 147, 0.10);
+  --nav-accent-glow: rgba(47, 127, 147, 0.28);
+  --nav-text: #3a4045;
+  --nav-muted: #7a8287;
+  --nav-border: rgba(20, 40, 50, 0.08);
+  --nav-bg: rgba(255, 255, 255, 0.82);
+  --nav-on-accent: #fff;
 }
 
-html[data-theme="dark"] .masthead {
-  border-bottom-color: rgba(255, 255, 255, 0.12);
+html[data-theme="dark"] {
+  --nav-accent: #f2c14e;
+  --nav-accent-2: #ffd98a;
+  --nav-accent-soft: rgba(242, 193, 78, 0.14);
+  --nav-accent-glow: rgba(242, 193, 78, 0.30);
+  --nav-text: #e8e6e1;
+  --nav-muted: #a7a49c;
+  --nav-border: rgba(255, 255, 255, 0.08);
+  --nav-bg: rgba(16, 17, 20, 0.85);
+  --nav-on-accent: #1f1806;
+}
+
+.masthead {
+  border-bottom: 1px solid var(--nav-border) !important;
+  background: var(--nav-bg) !important;
+  -webkit-backdrop-filter: saturate(180%) blur(12px);
+  backdrop-filter: saturate(180%) blur(12px);
+  box-shadow: 0 6px 24px rgba(20, 40, 50, 0.05);
+}
+
+.masthead__menu-item {
+  background-color: transparent !important;
 }
 
 .masthead__inner-wrap {
   max-width: 1180px !important;
   margin: 0 auto !important;
-  padding: 0.7rem 1.2rem !important;
+  padding: 0.6rem 1.2rem !important;
 }
 
 .greedy-nav {
@@ -83,6 +110,7 @@ html[data-theme="dark"] .masthead {
   display: flex !important;
   flex-wrap: wrap;
   align-items: center;
+  gap: 0.25rem;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -90,53 +118,144 @@ html[data-theme="dark"] .masthead {
 
 .greedy-nav .visible-links li {
   display: block;
-  background: transparent;
 }
 
+/* テーマ標準の下線アニメーションは使わない */
+.greedy-nav .visible-links a:before,
+.greedy-nav .visible-links a:after {
+  display: none !important;
+}
+
+/* --- ナビのリンク：ピル型 --- */
 .greedy-nav .visible-links a {
-  margin: 0 0.8rem;
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  padding: 0.42rem 0.95rem;
+  border: 0 !important;
+  border-radius: 999px;
+  color: var(--nav-text) !important;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
 
-/* サイトタイトルは左、メニューは右寄せ */
+.greedy-nav .visible-links a:hover {
+  background: var(--nav-accent-soft);
+  color: var(--nav-accent) !important;
+}
+
+.greedy-nav .visible-links li.selected a,
+.greedy-nav .visible-links li.selected a:hover {
+  background: var(--nav-accent);
+  color: var(--nav-on-accent) !important;
+  font-weight: 600;
+  border: 0 !important;
+  box-shadow: 0 4px 14px var(--nav-accent-glow);
+}
+
+/* --- テーマ切替：丸ボタン --- */
+#theme-toggle {
+  margin-left: 0.35rem;
+}
+
+#theme-toggle a {
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  padding: 0;
+  border: 1px solid var(--nav-border) !important;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#theme-toggle a:hover {
+  transform: rotate(20deg);
+}
+
+/* --- 左上のロゴ --- */
 .greedy-nav .visible-links li.masthead__menu-item--lg {
   margin-right: auto;
   padding-right: 1rem;
 }
 
-.greedy-nav .visible-links li.masthead__menu-item--lg a {
-  margin-left: 0;
-  font-size: 1.02rem;
-  font-weight: 650;
-  color: var(--global-masthead-link-color);
+.greedy-nav .visible-links a.site-brand,
+.greedy-nav .visible-links a.site-brand:hover {
+  display: inline-flex !important;
+  flex-wrap: nowrap;
+  gap: 0.7rem;
+  padding: 0.15rem 0.3rem 0.15rem 0;
+  background: transparent;
+  box-shadow: none;
 }
 
-/* スマホではタイトルの下にメニューを1段で並べる */
-@media (max-width: 640px) {
+.site-brand__mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--nav-accent);
+  transition: transform 0.35s ease, color 0.25s ease;
+}
+
+.site-brand__mark svg {
+  display: block;
+  width: 2.75rem;
+  height: 2.75rem;
+}
+
+.site-brand__rabbit {
+  transform-origin: 32px 60px;
+  transition: transform 0.35s ease;
+}
+
+/* ホバーで月が少し揺れ、ウサギが跳ねる */
+.site-brand:hover .site-brand__mark {
+  transform: rotate(-8deg);
+}
+
+.site-brand:hover .site-brand__rabbit {
+  transform: translateY(-3px);
+}
+
+/* スマホ：1段目にロゴ、2段目にメニューを横スクロールで並べる */
+@media (max-width: 760px) {
   .masthead__inner-wrap {
     padding: 0.5rem 0.9rem !important;
   }
 
   .greedy-nav .visible-links li.masthead__menu-item--lg {
-    flex-basis: 100%;
+    flex: 0 0 calc(100% - 2.8rem);
     padding-right: 0;
+    order: 0;
+  }
+
+  #theme-toggle {
+    order: 1;
+    margin-left: auto;
   }
 
   .greedy-nav .visible-links {
-    justify-content: flex-start !important;
+    row-gap: 0.4rem;
   }
 
-  .greedy-nav .visible-links li.masthead__menu-item--lg a {
-    display: inline-block;
-    font-size: 0.96rem;
+  .greedy-nav .visible-links li:not(.masthead__menu-item--lg):not(#theme-toggle) {
+    order: 2;
+  }
+
+  .greedy-nav .visible-links li.masthead__menu-item--lg + li {
+    margin-left: 0;
   }
 
   .greedy-nav .visible-links a {
-    margin: 0 0.5rem;
-    font-size: 0.85rem;
+    padding: 0.35rem 0.7rem;
+    font-size: 0.82rem;
   }
 
-  .greedy-nav .visible-links li:nth-child(2) a {
-    margin-left: 0;
+  .site-brand__mark svg {
+    width: 2.4rem;
+    height: 2.4rem;
   }
 }
 
@@ -160,4 +279,14 @@ html[data-theme="dark"] .social-icons .fab {
 #main {
   width: 100%;
   box-sizing: border-box;
+}
+
+/* ダークモード：背景を暗くしたので、線や枠も暗めの色にして浮かないようにする */
+html[data-theme="dark"] {
+  --global-border-color: #34373d;
+  --global-dark-border-color: #2a2d33;
+}
+
+html[data-theme="dark"] .author__avatar img {
+  border-color: #34373d !important;
 }
