@@ -9,56 +9,39 @@ redirect_from:
 
 {% include base_path %}
 
+Experience
+======
+* **Research Engineer**, K2I Ltd. (Feb 2025 – Present)
+* **Research Engineer**, SenseTime Japan Ltd. (Apr 2024 – Jan 2025)
+* **JSPS Research Fellowship (DC2)** (Apr 2023 – Mar 2024)
+* **Special Assistant**, Faculty of Science and Engineering, Meijo University (Apr 2021 – Mar 2023)
+
 Education
 ======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+* **Ph.D. (Doctor of Engineering)**, Graduate School of Science and Engineering, Meijo University (Apr 2021 – Mar 2024)
+* **M.Eng. (Master of Engineering)**, Graduate School of Science and Engineering, Meijo University (Apr 2019 – Mar 2021)
+* **B.Eng. (Bachelor of Engineering)**, Faculty of Engineering, Meijo University (Apr 2015 – Mar 2019)
 
-Work experience
+Research Interests
 ======
-* Spring 2024: Academic Pages Collaborator
-  * GitHub University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+* Computer vision and pattern recognition
+* Edge and mobile AI (real-time models for low-TOPS hardware)
+* Adaptation of foundation and large-scale models
+* Learning under class imbalance
+* Medical and biological image analysis
 
-* Fall 2015: Research Assistant
-  * GitHub University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
-
-* Summer 2015: Research Assistant
-  * GitHub University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-  
-Skills
+Awards and Grants
 ======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+See [Achievements]({{ base_path }}/achievements/).
 
 Publications
 ======
-  <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Talks
-======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
+{% for category in site.publication_category %}
+  {% assign posts_in_category = site.publications | where: "category", category[0] %}
+  {% if posts_in_category.size > 0 %}
+<h2>{{ category[1].title }}</h2>
+<ul>{% for post in posts_in_category reversed %}
+  {% include archive-single-cv.html %}
+{% endfor %}</ul>
+  {% endif %}
+{% endfor %}

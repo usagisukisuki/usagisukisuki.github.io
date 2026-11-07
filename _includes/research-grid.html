@@ -11,11 +11,17 @@
           {% for it in items %}
             {% if it.tags contains topic %}
               <article class="rt-card">
+                {% assign img_file = nil %}
                 {% if it.image %}
-                  <div class="rt-img">
-                    <img src="{{ it.image }}" alt="">
-                  </div>
+                  {% assign img_file = site.static_files | where: "path", it.image | first %}
                 {% endif %}
+                <div class="rt-img">
+                  {% if img_file %}
+                    <img src="{{ it.image | relative_url }}" alt="{{ it.title | escape }}" loading="lazy">
+                  {% else %}
+                    <div class="rt-img-placeholder" aria-hidden="true"></div>
+                  {% endif %}
+                </div>
 
                 <div class="rt-body">
                   <div class="rt-card-title">{{ it.title }}</div>
@@ -48,20 +54,18 @@
   /* 1トピック = 横スクロール1段 */
   .rt-row{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(480px, 100%), 1fr));
     gap: 1rem;
   }
 
   /* 横長カード */
   .rt-card{
-    flex: 0 0 720px;
     display: grid;
     grid-template-columns: 220px 1fr;
     border: 1px solid #e6e6e6;
     border-radius: 12px;
     overflow: hidden;
     background: #fff;
-    scroll-snap-align: start;
     transition: transform .18s ease, box-shadow .18s ease;
   }
 
@@ -84,7 +88,13 @@
     display: block;
   }
 
-  .rt-body{ padding: .85rem 1rem; }
+  .rt-img-placeholder{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #f2f2f2, #e4e4e4);
+  }
+
+  .rt-body{ padding: .85rem 1rem; min-width: 0; }
   .rt-card-title{ font-weight: 700; line-height: 1.25; }
   .rt-meta{ margin-top: .35rem; font-style: italic; opacity: .85; }
   .rt-authors{ margin-top: .25rem; opacity: .9; }
@@ -106,5 +116,10 @@
 
   .rt-link:hover{
     background: #e6e6e6;
+  }
+
+  @media (max-width: 600px){
+    .rt-card{ grid-template-columns: 1fr; }
+    .rt-img{ width: 100%; }
   }
 </style>

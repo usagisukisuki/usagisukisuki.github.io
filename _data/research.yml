@@ -4,18 +4,16 @@ topics:
   - Foundation Model Adaptation
   - Imbalanced Learning
   - Medical Imaging
-  - Biolodical Imaging
-  - Action Recognision and Visualization
+  - Biological Imaging
+  - Action Recognition and Visualization
 
 items:
-  - title: "REMODE: REal-time Monocular 3D ObjectDetection on Edge Devices"
+  - title: "REMODE: REal-time Monocular 3D Object Detection on Edge Devices"
     year: 
     authors: "Sota Kato"
     venue: "Soon..."
     image: "/images/research/bev.png"
-    links:
-      - text: "PDF"
-        url: "https://example.com/paper.pdf"
+    links: []
     tags: ["Edge AI for Autonomous Driving"]
 
 
@@ -28,9 +26,7 @@ items:
       - text: "PDF"
         url: "https://arxiv.org/pdf/2408.12406"
       - text: "Code"
-        url: "https://github.com/username/project"
-      - text: "Project"
-        url: "https://project-page.com"
+        url: "https://github.com/usagisukisuki/G-SAM"
     tags: ["Foundation Model Adaptation"]
 
     
@@ -94,7 +90,7 @@ items:
     venue: "In progress"
     image: "/images/research/plan.png"
     links: []
-    tags: ["Biolodical Imaging"]
+    tags: ["Biological Imaging"]
     
   - title: "Automatic preprocessing for segmentation"
     year: 2024
@@ -102,7 +98,7 @@ items:
     venue: "In progress"
     image: "/images/research/plan.png"
     links: []
-    tags: ["Biolodical Imaging"]
+    tags: ["Biological Imaging"]
 
   - title: "Cell image segmentation using image translation"
     year: 2024
@@ -110,7 +106,7 @@ items:
     venue: "In progress"
     image: "/images/research/plan.png"
     links: []
-    tags: ["Biolodical Imaging"]
+    tags: ["Biological Imaging"]
 
 
   - title: "Pitching classification and habit detection"
@@ -119,7 +115,7 @@ items:
     venue: "In progress"
     image: "/images/research/plan.png"
     links: []
-    tags: ["Action Recognision and Visualization"]
+    tags: ["Action Recognition and Visualization"]
 
   - title: "Classifying physical activity in free-living preschool children"
     year: 2024
@@ -127,5 +123,5 @@ items:
     venue: "In progress"
     image: "/images/research/plan.png"
     links: []
-    tags: ["Action Recognision and Visualization"]
+    tags: ["Action Recognition and Visualization"]
 
