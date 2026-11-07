@@ -11,7 +11,7 @@ redirect_from:
 
 Experience
 ======
-* **Research Engineer**, K2I Ltd. (Feb 2025 – Present)
+* **Research Engineer**, [K2I Ltd.](https://k2i.jp/) (Feb 2025 – Present)
 * **Research Engineer**, SenseTime Japan Ltd. (Apr 2024 – Jan 2025)
 * **JSPS Research Fellowship (DC2)** (Apr 2023 – Mar 2024)
 * **Special Assistant**, Faculty of Science and Engineering, Meijo University (Apr 2021 – Mar 2023)

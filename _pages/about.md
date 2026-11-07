@@ -14,7 +14,7 @@ redirect_from:
 
 <section class="hp-hero">
   <h1 class="hp-name">Sota Kato<span class="hp-name-ja">加藤 聡太</span></h1>
-  <p class="hp-lead">I am a researcher in computer vision and machine learning. I received my Ph.D. in Engineering from Meijo University. I am interested in challenges and applications of real-world data in deep learning across diverse domains. My past research includes image recognition in cell biology and medical imaging, as well as learning under class imbalance. Recently, I have been exploring real-time models for low-TOPS hardware and methods to leverage knowledge from foundation and large-scale models.</p>
+  <p class="hp-lead">I am a researcher in computer vision and machine learning, currently working at <a href="https://k2i.jp/">K2I</a>. I received my Ph.D. in Engineering from Meijo University. My research interests center on the challenges and applications of real-world data in deep learning across diverse domains. My past work includes image recognition in cell biology and medical imaging, as well as learning under class imbalance. More recently, I have been exploring real-time models for low-TOPS hardware and methods for leveraging knowledge from foundation models and other large-scale models.</p>
   <ul class="hp-chips">
     <li>Computer Vision</li>
     <li>Edge AI</li>
@@ -40,7 +40,7 @@ redirect_from:
   <ol class="hp-timeline">
     <li class="is-current">
       <span class="hp-tl-date">Feb 2025 – Present</span>
-      <span class="hp-tl-title">K2I Ltd.</span>
+      <a class="hp-tl-title" href="https://k2i.jp/">K2I Ltd.</a>
       <span class="hp-tl-sub">Research Engineer</span>
     </li>
     <li>
