@@ -1,125 +1,41 @@
 {% assign topics = site.data.research.topics %}
 {% assign items = site.data.research.items %}
 
-<div class="research-by-topic">
+<div class="hp-research">
   {% for topic in topics %}
-    {% if topic != "all" %}
-      <section class="rt-section">
-        <h3 class="rt-title">{{ topic }}</h3>
-
-        <div class="rt-row">
-          {% for it in items %}
-            {% if it.tags contains topic %}
-              <article class="rt-card">
-                {% assign img_file = nil %}
-                {% if it.image %}
-                  {% assign img_file = site.static_files | where: "path", it.image | first %}
-                {% endif %}
-                <div class="rt-img">
-                  {% if img_file %}
-                    <img src="{{ it.image | relative_url }}" alt="{{ it.title | escape }}" loading="lazy">
-                  {% else %}
-                    <div class="rt-img-placeholder" aria-hidden="true"></div>
-                  {% endif %}
-                </div>
-
-                <div class="rt-body">
-                  <div class="rt-card-title">{{ it.title }}</div>
-                  <div class="rt-meta">
-                    <span class="rt-venue">{{ it.venue }}</span>{% if it.year %}, <span class="rt-year">{{ it.year }}</span>{% endif %}
-                  </div>
-                  <div class="rt-authors">{{ it.authors }}</div>
-
-                  {% if it.links and it.links.size > 0 %}
-                    <div class="rt-links">
-                      {% for l in it.links %}
-                        <a href="{{ l.url }}" class="rt-link">{{ l.text }}</a>
-                      {% endfor %}
-                    </div>
-                  {% endif %}
-                </div>
-              </article>
+    <section class="hp-topic">
+      <h3 class="hp-topic-title">{{ topic }}</h3>
+      <div class="hp-cards">
+        {% for it in items %}
+          {% if it.tags contains topic %}
+            {% assign img_file = nil %}
+            {% if it.image %}
+              {% assign img_file = site.static_files | where: "path", it.image | first %}
             {% endif %}
-          {% endfor %}
-        </div>
-      </section>
-    {% endif %}
+            <article class="hp-card">
+              <div class="hp-card-media{% unless img_file %} hp-card-media--ph{% endunless %}">
+                {% if img_file %}
+                  <img src="{{ it.image | relative_url }}" alt="{{ it.title | escape }}" loading="lazy">
+                {% else %}
+                  <div class="hp-card-ph" aria-hidden="true"><i class="fas fa-flask"></i></div>
+                {% endif %}
+              </div>
+              <div class="hp-card-body">
+                <h4 class="hp-card-title">{{ it.title }}</h4>
+                <p class="hp-card-meta">{{ it.venue }}{% if it.year %} · {{ it.year }}{% endif %}</p>
+                <p class="hp-card-authors">{{ it.authors }}</p>
+                {% if it.links and it.links.size > 0 %}
+                  <div class="hp-card-links">
+                    {% for l in it.links %}
+                      <a href="{{ l.url }}" class="hp-pill">{{ l.text }}</a>
+                    {% endfor %}
+                  </div>
+                {% endif %}
+              </div>
+            </article>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </section>
   {% endfor %}
 </div>
-
-<style>
-  .rt-section { margin: 1.25rem 0 1.75rem 0; }
-  .rt-title { margin: 0 0 .75rem 0; font-size: 1.15rem; }
-
-  /* 1トピック = 横スクロール1段 */
-  .rt-row{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(480px, 100%), 1fr));
-    gap: 1rem;
-  }
-
-  /* 横長カード */
-  .rt-card{
-    display: grid;
-    grid-template-columns: 220px 1fr;
-    border: 1px solid #e6e6e6;
-    border-radius: 12px;
-    overflow: hidden;
-    background: #fff;
-    transition: transform .18s ease, box-shadow .18s ease;
-  }
-
-  .rt-card:hover{
-    transform: translateY(-4px);
-    box-shadow: 0 8px 22px rgba(0,0,0,0.08);
-  }
-
-  .rt-img{
-    width: 220px;
-    aspect-ratio: 16 / 9;
-    overflow: hidden;
-    background: #f5f5f5;
-  }
-
-  .rt-img img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-
-  .rt-img-placeholder{
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, #f2f2f2, #e4e4e4);
-  }
-
-  .rt-body{ padding: .85rem 1rem; min-width: 0; }
-  .rt-card-title{ font-weight: 700; line-height: 1.25; }
-  .rt-meta{ margin-top: .35rem; font-style: italic; opacity: .85; }
-  .rt-authors{ margin-top: .25rem; opacity: .9; }
-
-  .rt-links{
-    margin-top: .6rem;
-    display: flex;
-    gap: .5rem;
-  }
-
-  .rt-link{
-    font-size: .8rem;
-    padding: .25rem .6rem;
-    border-radius: 6px;
-    background: #f2f2f2;
-    text-decoration: none;
-    color: #333;
-  }
-
-  .rt-link:hover{
-    background: #e6e6e6;
-  }
-
-  @media (max-width: 600px){
-    .rt-card{ grid-template-columns: 1fr; }
-    .rt-img{ width: 100%; }
-  }
-</style>
