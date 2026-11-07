@@ -3,9 +3,13 @@
 
 <div class="hp-research">
   {% for topic in topics %}
+    {% assign topic_items = items | where_exp: "it", "it.tags contains topic" %}
     <section class="hp-topic">
-      <h3 class="hp-topic-title">{{ topic }}</h3>
-      <div class="hp-cards">
+      <div class="hp-topic-head">
+        <h3 class="hp-topic-title">{{ topic }}</h3>
+        {% if topic_items.size > 1 %}<span class="hp-topic-more">{{ topic_items.size }} items<i class="fas fa-arrows-up-down" aria-hidden="true"></i></span>{% endif %}
+      </div>
+      <div class="hp-cards{% if topic_items.size > 1 %} is-scroll{% endif %}">
         {% for it in items %}
           {% if it.tags contains topic %}
             {% assign img_file = nil %}

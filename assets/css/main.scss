@@ -147,6 +147,14 @@ html[data-theme="dark"] .social-icons .fab {
   color: #e6e6e6;
 }
 
+/* 狭い画面の「Follow」メニュー：ボタンで開いたとき以外は閉じておく。
+   画面幅を広→狭に変えると JS が付けた display:block が残り、開きっぱなしになるのを防ぐ */
+@media (max-width: 63.99em) {
+  .author__urls-wrapper button:not(.open) + .author__urls {
+    display: none !important;
+  }
+}
+
 /* body は flex(column) なので、margin:auto の #main が中身の幅まで縮み
    固定サイドバー（プロフィール写真）と本文が重なるのを防ぐ */
 #main {
