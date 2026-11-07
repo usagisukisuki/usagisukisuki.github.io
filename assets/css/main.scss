@@ -165,3 +165,10 @@ button.greedy-nav__toggle {
     margin-right: 0 !important;
   }
 }
+
+/* body は flex(column) なので、margin:auto の #main が中身の幅まで縮み
+   固定サイドバー（プロフィール写真）と本文が重なるのを防ぐ */
+#main {
+  width: 100%;
+  box-sizing: border-box;
+}
