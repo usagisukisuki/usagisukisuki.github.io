@@ -78,6 +78,7 @@
   }
   .hp-topic-more{ flex: none; font-size: .72rem; font-weight: 600; color: var(--hp-muted); }
   .hp-topic-more i{ margin-left: .3rem; color: var(--hp-accent); }
+  .hp-more-x{ display: none; }
 
   /* 1分野につき横長カードを1枚分の高さで見せ、2件以上は枠内で縦スクロール（1枚ずつ止まる） */
   .hp-cards{ display: flex; flex-direction: column; gap: 1rem; }
@@ -159,14 +160,21 @@
   @media (max-width: 720px){
     .hp .hp-name{ font-size: 2.1rem; }
     .hp-two{ grid-template-columns: 1fr; }
-    /* スマホでは横長カードの高さを中身に合わせ、枠内スクロールはやめて全件表示 */
     /* スマホではカードを縦積み（上に図、下に文字）にして図が潰れないようにする */
     .hp-card{ height: auto; flex-direction: column; }
     .hp-card-media{ flex: none; height: 11rem; border-right: 0; border-bottom: 1px solid var(--hp-border); }
     .hp-card-media--ph{ height: 6rem; }
     .hp-card-body{ padding: .8rem 1rem .9rem; }
-    .hp-cards.is-scroll{ max-height: none; overflow: visible; padding-right: 0; }
-    .hp-topic-more{ display: none; }
+    /* 2件以上の分野は横スワイプで1枚ずつ送る（次のカードが少し覗く） */
+    .hp-cards.is-scroll{
+      flex-direction: row; align-items: stretch; gap: .75rem;
+      max-height: none; overflow-x: auto; overflow-y: hidden; padding: 0 0 .7rem;
+      scroll-snap-type: x mandatory; overscroll-behavior-x: contain;
+    }
+    .hp-cards.is-scroll::-webkit-scrollbar{ width: auto; height: 5px; }
+    .hp-cards.is-scroll .hp-card{ flex: 0 0 86%; }
+    .hp-more-y{ display: none; }
+    .hp-more-x{ display: inline-block; }
     .hp-two{ gap: 0; }
   }
 </style>

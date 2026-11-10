@@ -7,7 +7,7 @@
     <section class="hp-topic">
       <div class="hp-topic-head">
         <h3 class="hp-topic-title">{{ topic }}</h3>
-        {% if topic_items.size > 1 %}<span class="hp-topic-more">{{ topic_items.size }} items<i class="fas fa-arrows-up-down" aria-hidden="true"></i></span>{% endif %}
+        {% if topic_items.size > 1 %}<span class="hp-topic-more">{{ topic_items.size }} items<i class="fas fa-arrows-up-down hp-more-y" aria-hidden="true"></i><i class="fas fa-arrows-left-right hp-more-x" aria-hidden="true"></i></span>{% endif %}
       </div>
       <div class="hp-cards{% if topic_items.size > 1 %} is-scroll{% endif %}">
         {% for it in items %}
