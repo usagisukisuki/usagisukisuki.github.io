@@ -38,6 +38,8 @@
     display: block; margin-top: .5rem; font-size: 1.05rem; font-weight: 600; letter-spacing: .3em; color: var(--hp-muted);
   }
   .hp .hp-lead{ margin: 1.25rem 0 0; font-size: 1rem; line-height: 1.75; color: var(--hp-text); }
+  /* 右端をそろえる（両端揃え）。単語間が空きすぎないよう英単語はハイフンで区切れるようにする */
+  .hp .hp-lead{ text-align: justify; text-justify: inter-word; -webkit-hyphens: auto; hyphens: auto; }
 
   .hp-chips{ display: flex; flex-wrap: wrap; gap: .45rem; margin: 1.1rem 0 0; padding: 0; list-style: none; }
   .hp-chips li{
