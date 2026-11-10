@@ -158,8 +158,11 @@
     .hp .hp-name{ font-size: 2.1rem; }
     .hp-two{ grid-template-columns: 1fr; }
     /* スマホでは横長カードの高さを中身に合わせ、枠内スクロールはやめて全件表示 */
-    .hp-card{ height: auto; min-height: 8rem; }
-    .hp-card-media{ flex-basis: 38%; }
+    /* スマホではカードを縦積み（上に図、下に文字）にして図が潰れないようにする */
+    .hp-card{ height: auto; flex-direction: column; }
+    .hp-card-media{ flex: none; height: 11rem; border-right: 0; border-bottom: 1px solid var(--hp-border); }
+    .hp-card-media--ph{ height: 6rem; }
+    .hp-card-body{ padding: .8rem 1rem .9rem; }
     .hp-cards.is-scroll{ max-height: none; overflow: visible; padding-right: 0; }
     .hp-topic-more{ display: none; }
     .hp-two{ gap: 0; }

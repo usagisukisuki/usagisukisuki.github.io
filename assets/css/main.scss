@@ -219,16 +219,45 @@ html[data-theme="dark"] {
   transform: translateY(-3px);
 }
 
-/* スマホ：1段目にロゴ、2段目にメニューを横スクロールで並べる */
+/* ページへのリンク（Home〜CV）はひとまとまりのリストにする */
+.greedy-nav .visible-links li.site-nav-links {
+  position: relative;
+  min-width: 0;
+}
+
+.greedy-nav .site-nav-links__list {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 0.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.greedy-nav .site-nav-links__list a {
+  white-space: nowrap;
+}
+
+/* スマホ：1段目にロゴとテーマ切替、2段目にメニューを1列で並べる（入りきらなければ横スクロール） */
 @media (max-width: 760px) {
   .masthead__inner-wrap {
-    padding: 0.5rem 0.9rem !important;
+    padding: 0.45rem 0.75rem 0.5rem !important;
+  }
+
+  .greedy-nav {
+    min-height: 0 !important;
+  }
+
+  .greedy-nav .visible-links {
+    flex-wrap: wrap;
+    row-gap: 0.35rem;
   }
 
   .greedy-nav .visible-links li.masthead__menu-item--lg {
-    flex: 0 0 calc(100% - 2.8rem);
-    padding-right: 0;
+    flex: 1 1 auto;
     order: 0;
+    padding-right: 0;
   }
 
   #theme-toggle {
@@ -236,26 +265,34 @@ html[data-theme="dark"] {
     margin-left: auto;
   }
 
-  .greedy-nav .visible-links {
-    row-gap: 0.4rem;
-  }
-
-  .greedy-nav .visible-links li:not(.masthead__menu-item--lg):not(#theme-toggle) {
+  .greedy-nav .visible-links li.site-nav-links {
     order: 2;
+    flex: 0 0 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
   }
 
-  .greedy-nav .visible-links li.masthead__menu-item--lg + li {
-    margin-left: 0;
+  .greedy-nav .visible-links li.site-nav-links::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* 入りきるときは中央、はみ出すときは左端からスクロール */
+  .greedy-nav .site-nav-links__list {
+    width: max-content;
+    margin: 0 auto;
+    gap: 0.1rem;
+    padding: 0.15rem 0 0.35rem;
   }
 
   .greedy-nav .visible-links a {
-    padding: 0.35rem 0.7rem;
-    font-size: 0.82rem;
+    padding: 0.35rem 0.6rem;
+    font-size: 0.8rem;
   }
 
   .site-brand__mark svg {
-    width: 2.4rem;
-    height: 2.4rem;
+    width: 2.3rem;
+    height: 2.3rem;
   }
 }
 

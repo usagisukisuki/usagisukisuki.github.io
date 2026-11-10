@@ -29,6 +29,8 @@
               </span>
             </a>
           </li>
+          <li class="site-nav-links persist">
+            <ul class="site-nav-links__list">
           <li class="masthead__menu-item {% if is_home %}selected{% endif %}">
             <a href="{{ base_path }}/">Home</a>
           </li>
@@ -42,11 +44,22 @@
               <a href="{{ domain }}{{ link.url }}">{{ link.title }}</a>
             </li>
           {% endfor %}
+            </ul>
+          </li>
           <li id="theme-toggle" class="masthead__menu-item persist tail">
             <a role="button" aria-labelledby="theme-icon"><i id="theme-icon" class="fa-solid fa-sun" aria-hidden="true" title="toggle theme"></i></a>
           </li>
         </ul>
       </nav>
+      <script>
+        /* スマホでメニューが横スクロールになったとき、選択中のページを見える位置に出す */
+        (function () {
+          var box = document.querySelector('#site-nav-static .site-nav-links');
+          var cur = box && box.querySelector('li.selected');
+          if (!box || !cur || box.scrollWidth <= box.clientWidth) return;
+          box.scrollLeft = cur.offsetLeft - (box.clientWidth - cur.offsetWidth) / 2;
+        })();
+      </script>
     </div>
   </div>
 </div>
