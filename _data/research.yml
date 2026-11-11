@@ -8,6 +8,14 @@ topics:
   - Action Recognition and Visualization
 
 items:
+  - title: "REMODE: REal-time Monocular 3D Object Detection on Edge Devices"
+    year:
+    authors: "Sota Kato"
+    venue: "Soon..."
+    image: "/images/remode.png"
+    links: []
+    tags: ["Edge AI"]
+
   - title: "Lite-HRNet Plus: Fast and Accurate Facial Landmark Detection"
     year: 2023
     authors: "Sota Kato, Kazuhiro Hotta, Yuhki Hatakeyama, Yoshinori Konishi"
@@ -16,14 +24,6 @@ items:
     links:
       - text: "PDF"
         url: "https://arxiv.org/pdf/2308.12133.pdf"
-    tags: ["Edge AI"]
-
-  - title: "REMODE: REal-time Monocular 3D Object Detection on Edge Devices"
-    year: 
-    authors: "Sota Kato"
-    venue: "Soon..."
-    image: "/images/remode.png"
-    links: []
     tags: ["Edge AI"]
 
 
@@ -94,37 +94,45 @@ items:
 
 
 
-  - title: "One-shot and partially-supervised cell image segmentation"
-    year: 2024
-    authors: "Sota Kato"
-    venue: "In progress"
+  - title: "One-shot and partially-supervised cell image segmentation using small visual prompt"
+    year: 2023
+    authors: "Sota Kato, Kazuhiro Hotta"
+    venue: "Computer Vision for Microscopy Image Analysis (CVPR Workshop)"
     image: "/images/cell_1.png"
-    links: []
+    links:
+      - text: "PDF"
+        url: "https://openaccess.thecvf.com/content/CVPR2023W/CVMI/papers/Kato_One-Shot_and_Partially-Supervised_Cell_Image_Segmentation_Using_Small_Visual_Prompt_CVPRW_2023_paper.pdf"
     tags: ["Biological Imaging"]
-    
-  - title: "Automatic preprocessing for segmentation"
+
+  - title: "Automatic enhancement preprocessing for segmentation of low quality cell images"
     year: 2024
-    authors: "Sota Kato"
-    venue: "In progress"
+    authors: "Sota Kato, Kazuhiro Hotta"
+    venue: "Scientific Reports (IF=5.0)"
     image: "/images/cellems.PNG"
-    links: []
+    links:
+      - text: "PDF"
+        url: "https://www.nature.com/articles/s41598-024-53411-7"
     tags: ["Biological Imaging"]
 
-  - title: "Cell image segmentation using image translation"
-    year: 2024
-    authors: "Sota Kato"
-    venue: "In progress"
+  - title: "Cell segmentation by image-to-image translation using multiple different discriminators"
+    year: 2020
+    authors: "Sota Kato, Kazuhiro Hotta"
+    venue: "International Conference on Bio-inspired Systems and Signal Processing (BIOSIGNALS)"
     image: "/images/pix2pix.png"
-    links: []
+    links:
+      - text: "PDF"
+        url: "https://www.scitepress.org/Papers/2020/91701/91701.pdf"
     tags: ["Biological Imaging"]
 
 
-  - title: "Pitching classification and habit detection"
-    year: 2024
-    authors: "Sota Kato"
-    venue: "In progress"
+  - title: "Pitching classification and habit detection by V-Net"
+    year: 2020
+    authors: "Sota Kato, Kazuhiro Hotta"
+    venue: "International Conference on Computer Vision Theory and Applications (VISAPP)"
     image: "/images/research/plan.png"
-    links: []
+    links:
+      - text: "PDF"
+        url: "https://www.scitepress.org/Papers/2020/93471/93471.pdf"
     tags: ["Action Recognition and Visualization"]
 
   - title: "Classifying physical activity in free-living preschool children"
