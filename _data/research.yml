@@ -5,7 +5,7 @@ topics:
   - Imbalanced Learning
   - Medical Imaging
   - Biological Imaging
-  - Action Recognition and Visualization
+  - Others
 
 items:
   - title: "REMODE: REal-time Monocular 3D Object Detection on Edge Devices"
@@ -125,6 +125,26 @@ items:
     tags: ["Biological Imaging"]
 
 
+  - title: "Semantic Segmentation by Semi-Supervised Learning Using Time Series Constraint"
+    year: 2023
+    authors: "Takahiro Mano, Sota Kato, Kazuhiro Hotta"
+    venue: "International Conference on Computer Vision Theory and Applications (VISAPP)"
+    image: "/images/time_series.png"
+    links:
+      - text: "PDF"
+        url: "https://www.scitepress.org/Papers/2023/117218/117218.pdf"
+    tags: ["Others"]
+
+  - title: "Improvement of Vision Transformer Using Word Patches"
+    year: 2023
+    authors: "Ayato Takama, Sota Kato, Satoshi Kamiya, Kazuhiro Hotta"
+    venue: "International Conference on Computer Vision Theory and Applications (VISAPP)"
+    image: "/images/words.png"
+    links:
+      - text: "PDF"
+        url: "https://www.scitepress.org/Papers/2023/117329/117329.pdf"
+    tags: ["Others"]
+
   - title: "Pitching classification and habit detection by V-Net"
     year: 2020
     authors: "Sota Kato, Kazuhiro Hotta"
@@ -133,13 +153,6 @@ items:
     links:
       - text: "PDF"
         url: "https://www.scitepress.org/Papers/2020/93471/93471.pdf"
-    tags: ["Action Recognition and Visualization"]
+    tags: ["Others"]
 
-  - title: "Classifying physical activity in free-living preschool children"
-    year: 2024
-    authors: "Sota Kato"
-    venue: "In progress"
-    image: "/images/research/plan.png"
-    links: []
-    tags: ["Action Recognition and Visualization"]
 
