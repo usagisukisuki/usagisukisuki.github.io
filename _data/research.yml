@@ -1,6 +1,6 @@
 # _data/research.yml
 topics:
-  - Edge AI for Autonomous Driving
+  - Edge AI
   - Foundation Model Adaptation
   - Imbalanced Learning
   - Medical Imaging
@@ -8,13 +8,23 @@ topics:
   - Action Recognition and Visualization
 
 items:
+  - title: "Lite-HRNet Plus: Fast and Accurate Facial Landmark Detection"
+    year: 2023
+    authors: "Sota Kato, Kazuhiro Hotta, Yuhki Hatakeyama, Yoshinori Konishi"
+    venue: "IEEE International Conference on Image Processing (ICIP)"
+    image: "/images/hrnet.png"
+    links:
+      - text: "PDF"
+        url: "https://arxiv.org/pdf/2308.12133.pdf"
+    tags: ["Edge AI"]
+
   - title: "REMODE: REal-time Monocular 3D Object Detection on Edge Devices"
     year: 
     authors: "Sota Kato"
     venue: "Soon..."
-    image: "/images/research/bev.png"
+    image: "/images/remode.png"
     links: []
-    tags: ["Edge AI for Autonomous Driving"]
+    tags: ["Edge AI"]
 
 
   - title: "Generalized SAM: Efficient Fine-Tuning of SAM for Variable Input Image Sizes"
@@ -66,7 +76,7 @@ items:
     year: 2023
     authors: "Sota Kato, Kazuhiro Hotta"
     venue: "International Journal of Computer Assisted Radiology and Surgery (IF=3.0)"
-    image: "/images/med_1.png"
+    image: "/images/me_1.png"
     links:
       - text: "PDF"
         url: "https://link.springer.com/article/10.1007/s11548-023-03038-2"
@@ -88,7 +98,7 @@ items:
     year: 2024
     authors: "Sota Kato"
     venue: "In progress"
-    image: "/images/research/plan.png"
+    image: "/images/cell_1.png"
     links: []
     tags: ["Biological Imaging"]
     
@@ -96,7 +106,7 @@ items:
     year: 2024
     authors: "Sota Kato"
     venue: "In progress"
-    image: "/images/research/plan.png"
+    image: "/images/cellems.PNG"
     links: []
     tags: ["Biological Imaging"]
 
@@ -104,7 +114,7 @@ items:
     year: 2024
     authors: "Sota Kato"
     venue: "In progress"
-    image: "/images/research/plan.png"
+    image: "/images/pix2pix.png"
     links: []
     tags: ["Biological Imaging"]
 
